@@ -1,0 +1,28 @@
+* { box-sizing: border-box; }
+html {
+  background: #F7F7F7 url('bg.png');
+  line-height: 100vh;
+}
+body {
+  display: inline-block;
+  width: 34vw;
+  line-height: 1;
+  margin: 0 33vw;
+  background: #FFF;
+  border: 1px solid #BBB;
+  border-radius: 2px;
+  padding: 10px;
+  box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+  font-family: "Verdana", "Geneva", sans-serif;
+  font-size: smaller;
+}
+h1 {
+  margin: -10px -10px 10px;
+  padding: 10px;
+  background: #F7F7F7;
+  border-bottom: 1px solid #BBB;
+  font-weight: 400;
+}
+p {
+  margin: 10px 0 0;
+}
