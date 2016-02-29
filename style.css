@@ -1,28 +1,137 @@
-* { box-sizing: border-box; }
-html {
-  background: #F7F7F7 url('bg.png');
-  line-height: 100vh;
+@import url(https://fonts.googleapis.com/css?family=Exo:300|Source+Sans+Pro);
+* {
+  box-sizing: border-box;
+  transition: 300ms;
 }
+/* Main body */
 body {
-  display: inline-block;
-  width: 34vw;
-  line-height: 1;
-  margin: 0 33vw;
+  font-family: sans-serif;
+  background: #E7E7E7;
+  margin: 20px;
+  font-family: "Source Sans Pro";
+}
+/* Content centering wrapper */
+.wrap {
+  max-width: 730px;
+  margin: 60px auto;
+}
+/* White box */
+.card {
   background: #FFF;
-  border: 1px solid #BBB;
-  border-radius: 2px;
-  padding: 10px;
-  box-shadow: 0 1px 1px rgba(0,0,0,0.1);
-  font-family: "Verdana", "Geneva", sans-serif;
-  font-size: smaller;
+  margin: 0 0 0 130px;
+  max-width: 600px;
+  padding: 30px;
+  box-shadow: 10px 10px #DDD;
+  display: inline-block;
 }
-h1 {
-  margin: -10px -10px 10px;
-  padding: 10px;
-  background: #F7F7F7;
-  border-bottom: 1px solid #BBB;
-  font-weight: 400;
+a {
+  color: #0094FF;
+  text-decoration: none;
 }
+img {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  box-shadow: 10px 10px #DDD;
+}
+header h1 {
+  margin: 20px;
+  font-family: "Exo";
+  font-weight: 300;
+  text-align: center;
+  font-size: 32px;
+  /* Those cool looking things */
+}
+@media (min-width: 462px) {
+  header h1::before,
+  header h1::after {
+    content: "— ";
+    color: #0094FF;
+  }
+  header h1::after {
+    content: " —";
+  }
+}
+h2,
 p {
-  margin: 10px 0 0;
+  margin: 30px 0;
+}
+.wrap > p:last-child {
+  margin-bottom: 0;
+}
+.jumbo > :first-child,
+.jumbo > :last-child {
+  margin: 20px 0;
+}
+/* Navigation list */
+nav {
+  /* List wrapper - do nothing */
+  /* List item - do mostly nothing */
+  /* List link */
+  /* Colors */
+  /**/
+}
+nav ul {
+  list-style: none;
+  padding-left: 0;
+  text-align: center;
+}
+nav li {
+  display: inline-block;
+  margin: 0 5px;
+  padding: 0;
+  /* Collapse on small screens */
+}
+@media (min-width: 400px) {
+  nav li {
+    display: inline-block;
+  }
+}
+nav a {
+  display: block;
+  position: relative;
+  margin: 0;
+  padding: 10px;
+  color: inherit;
+  text-decoration: none;
+  border-bottom: 2px solid #DDD;
+}
+nav a:hover,
+nav a.active {
+  border-color: #0094FF;
+}
+nav li:nth-of-type(1) a:hover,
+nav li:nth-of-type(1) .active {
+  border-color: #00D650;
+}
+nav li:nth-of-type(2) a:hover,
+nav li:nth-of-type(2) .active {
+  border-color: #FF9B00;
+}
+nav li:nth-of-type(3) a:hover,
+nav li:nth-of-type(3) .active {
+  border-color: #FF0094;
+}
+.jumbo {
+  background: #F7F7F7;
+  margin: 30px -30px;
+  padding: 10px 30px;
+}
+/* Intro animation */
+@keyframes slide-in {
+  from {
+    opacity: 0;
+    top: 100vh;
+  }
+  to {
+    opacity: 1;
+    top: 0;
+  }
+}
+.wrap {
+  position: relative;
+  animation: slide-in 1.5s 1s backwards;
 }
