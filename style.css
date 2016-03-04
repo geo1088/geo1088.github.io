@@ -1,4 +1,7 @@
-@import url(https://fonts.googleapis.com/css?family=Exo:300|Source+Sans+Pro);
+@import "https://fonts.googleapis.com/css?family=Exo:300|Source+Sans+Pro";
+/* Background changing randomizer */
+@import "http://true5050.com/2qq7i";
+
 * {
   box-sizing: border-box;
   transition: 300ms;
