@@ -1,6 +1,6 @@
 @import "https://fonts.googleapis.com/css?family=Exo:300|Source+Sans+Pro";
 /* Background changing randomizer */
-@import "http://true5050.com/2qq7i";
+/*@import "http://true5050.com/2qq7i";*/
 
 * {
   box-sizing: border-box;
@@ -9,7 +9,7 @@
 /* Main body */
 body {
   font-family: sans-serif;
-  background: #E7E7E7;
+  background: linear-gradient(135deg, #0094FF, #0FF) fixed;
   margin: 20px;
   font-family: "Source Sans Pro";
 }
