@@ -71,7 +71,7 @@ display: inline-block;
     overflow: hidden;
     padding-top: 25px;
 }
-.social-row a:hover { filter: contrast(75%) } /* I refuse to prefix because I don't give a shit */
+.social-row a:hover { filter: contrast(75%); -webkit-filter: contrast(75%); }
 .social-row img {
     width: 100%;
     height: calc(100% + 25px);
