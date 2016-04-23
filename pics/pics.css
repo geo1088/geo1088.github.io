@@ -1,197 +1,218 @@
 @charset "UTF-8";
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic|Exo:400,300);
 *, *::before, *::after {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 body {
-  margin: 0;
-  font-family: "Open Sans", sans-serif;
-  font-size: 14px;
-  background: linear-gradient(135deg, #0094FF, #0FF) fixed;
+    margin: 0;
+    font-family: "Open Sans", sans-serif;
+    font-size: 14px;
+    background: linear-gradient(135deg, #0094FF, #0FF) fixed;
 }
 
 .wrap {
-  max-width: 300px;
-  margin: 0 auto;
+    max-width: 300px;
+    margin: 0 auto;
 }
 
 header {
-  text-align: center;
+    text-align: center;
 }
 header .header-content {
-  padding: 40px 0;
+    padding: 40px 0;
 }
 header a {
-  position: relative;
-  display: inline-block;
-  border-radius: 50%;
-  overflow: hidden;
-  width: 200px;
-  height: 200px;
+    position: relative;
+    display: inline-block;
+    border-radius: 50%;
+    overflow: hidden;
+    width: 200px;
+    height: 200px;
 }
 header a img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border-radius: inherit;
-  filter: brightness(100%);
-  -webkit-filter: brightness(100%);
-  transition: 200ms;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+    filter: brightness(100%);
+    -webkit-filter: brightness(100%);
+    transition: 200ms;
 }
 header a h1 {
-  margin: -10px 0 0;
-  color: #FFF;
-  font-weight: 300;
-  font-family: "exo";
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  left: 0;
-  width: 100%;
-  opacity: 0;
-  transition: 200ms;
+    margin: -10px 0 0;
+    color: #FFF;
+    font-weight: 300;
+    font-family: "exo";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    width: 100%;
+    opacity: 0;
+    transition: 200ms;
 }
 header a h1::before, header a h1::after {
-  content: " — ";
+    content: " — ";
 }
 header a:hover img {
-  filter: brightness(50%);
-  -webkit-filter: brightness(67.5%);
+    filter: brightness(50%);
+    -webkit-filter: brightness(67.5%);
 }
 header a:hover h1 {
-  opacity: 1;
-  margin: 0;
+    opacity: 1;
+    margin: 0;
 }
 
 /* nav {
-	background: rgba(0,0,0,0.2);
-	ul {
-		padding: 0;
-		list-style: none;
-		text-align: center;
-		display: flex;
-		justify-content: center;
-		flex-direction: column;
-	}
-	a {
-		display: block;
-		color: #FFF;
-		padding: 10px 20px;
-		text-decoration: none;
-		transition: 200ms;
-		
-		&:hover, &.current {
-			background: rgba(0,0,0,0.2);
-		}
-	}
+background: rgba(0,0,0,0.2);
+ul {
+padding: 0;
+list-style: none;
+text-align: center;
+display: flex;
+justify-content: center;
+flex-direction: column;
+}
+a {
+display: block;
+color: #FFF;
+padding: 10px 20px;
+text-decoration: none;
+transition: 200ms;
+
+&:hover, &.current {
+background: rgba(0,0,0,0.2);
+}
+}
 } */
 .bg {
-  background: white;
+    background: white;
 }
 
 main {
-  padding: 10px;
+    padding: 10px;
 }
 
 .flex-container {
-  display: flex;
-  flex-wrap: wrap;
-  margin: -10px;
-  padding: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: -10px;
+    padding: 5px;
 }
 
 .card {
-  margin: 5px;
-  flex: 0 1 calc(100% - 10px);
-  position: relative;
-  overflow: hidden;
-  background-position: center;
-  background-size: cover;
-  background-clip: padding-box;
-  transition: border-width 200ms;
+    margin: 5px;
+    flex: 0 1 calc(100% - 10px);
+    position: relative;
+    overflow: hidden;
+    background-position: center;
+    background-size: cover;
+    background-clip: padding-box;
+    transition: border-width 200ms;
 }
 .card:before {
-  display: block;
-  content: "";
-  width: 100%;
-  padding-top: 100%;
+    display: block;
+    content: "";
+    width: 100%;
+    padding-top: 100%;
 }
 .card > .content {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
 }
 .card .preview {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  height: 100%;
-  transform: translateX(-50%);
+    position: absolute;
+    top: 0;
+    left: 50%;
+    height: 100%;
+    transform: translateX(-50%);
 }
 .card .content {
-  opacity: 0;
-  color: initial;
-  display: block;
-  transition: 200ms;
+    opacity: 0;
+    color: initial;
+    display: block;
+    transition: 200ms;
 }
 .card .content .caption {
-  position: absolute;
-  bottom: calc(0px - 1em - 20px);
-  left: 0px;
-  width: calc(100%);
-  text-align: center;
-  margin: 0;
-  padding: 10px;
-  background: rgba(0, 0, 0, 0.5);
-  color: #FFF;
-  transition: 200ms;
+    position: absolute;
+    bottom: calc(0px - 1em - 20px);
+    left: 0px;
+    width: calc(100%);
+    text-align: center;
+    margin: 0;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.5);
+    color: #FFF;
+    transition: 200ms;
 }
 .card:hover .content {
-  opacity: 1;
+    opacity: 1;
 }
 .card:hover .content .caption {
-  bottom: 0;
+    bottom: 0;
+}
+
+.card:focus .preview {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    box-shadow: 0 0 0 200vw rgba(0,0,0,0.8);
+    max-width: calc(100vw - 100px);
+    max-height: calc(100vh - 100px);
 }
 
 @media screen and (max-width: 499px) {
-  nav ul.wrap {
-    margin: 0;
-    max-width: 100%;
-  }
+    nav ul.wrap {
+        margin: 0;
+        max-width: 100%;
+    }
 }
 @media screen and (min-width: 500px) {
-  nav ul {
-    flex-direction: row;
-  }
+    nav ul {
+        flex-direction: row;
+    }
 
-  .card {
-    flex: 0 1 calc(50% - 10px);
-  }
+    .card {
+        flex: 0 1 calc(50% - 10px);
+    }
 
-  .wrap {
-    max-width: 400px;
-  }
+    .wrap {
+        max-width: 400px;
+    }
 }
 @media screen and (min-width: 700px) {
-  .card {
-    flex: 0 1 calc(33.333% - 10px);
-  }
+    .card {
+        flex: 0 1 calc(33.333% - 10px);
+    }
 
-  .wrap {
-    max-width: 600px;
-  }
+    .wrap {
+        max-width: 600px;
+    }
 }
 @media screen and (min-width: 900px) {
-  .card {
-    flex: 0 1 calc(25% - 10px);
-  }
+    .card {
+        flex: 0 1 calc(25% - 10px);
+    }
 
-  .wrap {
-    max-width: 800px;
-  }
+    .wrap {
+        max-width: 800px;
+    }
+}
+.card:focus .preview {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-height: calc(100vh - 60px);
+    max-width: calc(100vw - 60px);
+    z-index: 1;
+    box-shadow: 0 0 0 100vw rgba(0,0,0,0.8);
 }
