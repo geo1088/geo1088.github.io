@@ -60,6 +60,9 @@ header {
     justify-content: center;
     position: relative;
 }
+header.full {
+    height: 100vh;
+}
 header a {
     color: #FFF;
     text-decoration: underline;
