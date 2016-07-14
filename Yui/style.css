@@ -52,7 +52,7 @@ a {
 
 header {
     min-height: 50vh;
-    padding: 80px 0;
+    padding: 50px 0;
     color: #FFF;
     text-shadow: 0 1px rgba(0,0,0,0.2);
     display: flex;
@@ -61,7 +61,7 @@ header {
     position: relative;
 }
 header.full {
-    height: 100vh;
+    min-height: calc(100vh - 102px);
 }
 header a {
     color: #FFF;
@@ -126,7 +126,7 @@ footer {
     display: flex;
     flex-direction: colummn;
     justify-content: center;
-    margin-top: 50px;
+    /*margin-top: 50px;*/
     border-top: 2px solid rgba(0,0,0,0.2);
 }
 footer a {
@@ -148,16 +148,14 @@ footer .wrap > * {
 }
 
 @media screen and (max-width: 719px) {
-    header {
-        padding: 30px 0;
-    }
+    header { padding: 20px 0 }
+    header.full { min-height: 0 }
     header .wrap, footer .wrap {
         flex-direction: column;
         align-items: center;
     }
-    header .text {
-        margin-top: 20px;
-    }
+    header .text, header .text > * + * { margin-top: 10px }
+    header .button-row { margin-top: 0 }
     footer .link-list {
         display: block;
         margin-bottom: calc((40px - 1em) / 2);
