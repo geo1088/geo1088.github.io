@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Bot commands - YuYuYu Discord portal!</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">YuYuYu Discord portal</a></li>
+            <li class="active"><a href="#">Commands</a></li>
+        </ul>
+    </nav>
+    <div class="wrap">
+
+        <h1>Music Commands</h1>
+
+        <h2><code>!musichelp [command]</code></h2>
+
+        <p>Prints a basic list of commands, or info on a command if <code>[command]</code> is specified.  Also links to the RhinoBot help page, which has more information about the music bot's commands.</p>
+
+        <h2><code>!play &lt;song link or song search&gt;</code></h2>
+
+        <p>Add a song to the queue, or add the first youtube result for the provided search text. Songs can be linked in several different formats, including YouTube links or direct music files.</p>
+
+        <h2><code>!queue</code></h2>
+
+        <p>Prints the bot's current queue in chat.</p>
+
+        <h2><code>!np</code></h2>
+
+        <p>Prints the currently playing song in the chat.</p>
+
+        <h2><code>!skip</code></h2>
+
+        <p>Vote to skip the current song. The owner (LordTakuro) can use this to skip a song automatically. The song will be skipped when either 4 people or 1/4 of the current listeners vote to skip, whichever is less.</p>
+
+        <h2><code>!search [service] [number] &lt;query&gt;</code></h2>
+
+        <p>Interactively search for a video to add to the queue.  The bot will look up <code>number</code> videos and prompts the user to accept or deny each video.  This command times out after 30 seconds, and has a hard limit of 10 max search items. <code>[service]</code> can be <code>youtube</code>, <code>soundcloud</code>, or <code>yahoo</code> (or their abbreviations <code>yt</code>, <code>sc</code>, <code>yh</code>). <code>[number]</code> is limited to 10 max.</p>
+
+        <h1>Non-music commands</h1>
+
+        <h2><code>!help [command]</code></h2>
+
+        <p>Gets help information about a topic or command.</p>
+
+        <h2><code>!choose &lt;option&gt;, &lt;option&gt;[, &lt;option&gt; ...]</code></h2>
+
+        <p>Chooses randomly from a list.</p>
+
+        <h2><code>!info</code></h2>
+
+        <p>This command is broken.</p>
+
+        <h2><code>!link</code></h2>
+
+        <p>Don't use this command.</p>
+
+        <h2><code>!ping [-t]</code></h2>
+
+        <p>Pings the bot. To measure the time it takes to send the response, add the -t flag.</p>
+
+        <h2><code>!roll &lt;roll&gt; [more rolls ...] [-d] [-r]</code></h2>
+
+        <p>Executes dice rolls in standard dice notation (e.g. <code>2d6</code>). Use the -d flag for a more detailed response, or the -r flag to be PM'd a raw log of the roll(s).</p>
+
+        <h2><code>!say &lt;message ...&gt;</code></h2>
+
+        <p>Makes the bot quote you.</p>
+    </div>
+</body>
+</html>
