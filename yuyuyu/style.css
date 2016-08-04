@@ -120,12 +120,14 @@ code {
     }
 }
 @media screen and (max-width: 400px) {
-    body { padding: 70px 10px 10px; }
+    body { padding: 60px 10px 10px; }
     nav ul {
         transform: rotate(0);
         -webkit-transform: rotate(0);
-        width: calc(100% - 70px);
+        width: calc(100% - 50px);
+        top: 0;
+        left: 50px;
     }
+    nav label { top: 0; left: 0; }
     nav li { font-size: 18px;}
-    nav > * { box-shadow: 0 -10px #EEE;}
 }
