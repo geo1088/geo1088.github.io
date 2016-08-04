@@ -120,14 +120,29 @@ code {
     }
 }
 @media screen and (max-width: 400px) {
-    body { padding: 60px 10px 10px; }
+    body {
+        padding: 60px 10px 10px;
+        box-shadow: inset 0 33vh #0094FF;
+    }
     nav ul {
         transform: rotate(0);
         -webkit-transform: rotate(0);
-        width: calc(100% - 50px);
+        width: 100%;
         top: 0;
-        left: 50px;
+        left: 0px;
+        z-index: 1;
+        border-bottom: 1px solid rgba(0,0,0,0.1);
     }
-    nav label { top: 0; left: 0; }
-    nav li { font-size: 18px;}
+    nav label {
+        top: 0;
+        left: 0;
+        z-index: 2;
+        border-bottom: 1px solid transparent;
+    }
+    nav input:not(:checked) ~ label {
+        border-bottom: 1px solid rgba(0,0,0,0.1);
+        transition: border-bottom 0ms 200ms;
+    }
+    nav li {font-size: 18px;}
+    nav a, nav li:first-child { padding-left: 60px;}
 }
