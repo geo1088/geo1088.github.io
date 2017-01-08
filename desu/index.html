@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Desu Desu!</title>
+    <style>
+.underlay {
+    background: url('https://my.mixtape.moe/vbkkxa.png');
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 1300px;
+    height: 800px;
+    margin-left: -650px;
+    margin-top: -400px;
+    z-index: 0;
+}
+
+.underlay_sxc {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    display: block;
+    z-index: 0;
+    height: 100%;
+    background: url('https://my.mixtape.moe/ifcwah.png');
+    background-size: 100% 100%;
+}
+
+.overlay {
+    background: url('https://my.mixtape.moe/txfsoh.png');
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 1300px;
+    height: 800px;
+    margin-left: -650px;
+    margin-top: -400px;
+    z-index: 2;
+}
+
+.desu {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 853px;
+    margin-left: -463px;
+    margin-top: -245px;
+    height: 479px;
+    display: block;
+    background: rgba(255, 0, 0, 0.2);
+}
+
+body {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    display: block;
+    height: 100%;
+    background: url('https://my.mixtape.moe/gerbkw.jpg');
+}
+    </style>
+</head>
+<body>
+    <div class="underlay"></div>
+    <div class="underlay_sxc"></div>
+    <div class="desu">
+        <iframe width="853" height="480" src="https://www.youtube.com/embed/60mLvBWOMb4?autoplay=1&hd=1&rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <div class="overlay"></div>
+</body>
+</html>
