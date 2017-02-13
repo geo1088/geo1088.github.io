@@ -50,7 +50,7 @@ h1 {
 
         <script type="text/javascript">
 // http://stackoverflow.com/a/9335296
-var end = new Date('2017-02-15 15:00');
+var end = new Date('2017-02-15 15:00').getTime();
 
 var _second = 1000;
 var _minute = _second * 60;
@@ -59,7 +59,7 @@ var _day = _hour * 24;
 var timer;
 
 function showRemaining() {
-    var now = new Date();
+    var now = new Date.getTime();
     var distance = end - now;
     if (distance < 0) {
 
