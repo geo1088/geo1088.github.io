@@ -1,0 +1,20 @@
+<nav>
+    <div class="wrap">
+        <a href="/"><h1 class="title">{{ site.title }}</h1></a>
+        <a href="/"><img class="avatar" src="/avatar.png" alt="Yui avatar" /></a>
+        <!-- <input type="checkbox" id="nav-toggle"/>
+        <label for="nav-toggle">Menu</label>
+        <ul>
+            {% assign pages = site.pages | sort:"order"  %}
+            {% for node in pages %}
+                {% if node.group == "nav" %}
+                    {% if page.url contains node.url %}
+                        <li class="active"><a href="#">{{node.title}}</a></li>
+                    {% else %}
+                        <li><a href="{{node.url}}">{{node.title}}</a></li>
+                    {% endif %}
+                {% endif %}
+            {% endfor %}
+        </ul> -->
+    </div>
+</nav>

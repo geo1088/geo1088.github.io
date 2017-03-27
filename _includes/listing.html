@@ -1,0 +1,15 @@
+<ul class="posts flex-cards">
+    {% for post in site.pages %}{% if post.title %}
+        <li class="post">
+            <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+            <p class="details">
+                {% if post.date %}
+                    <span class="date">{{post.date | date: "%B %-d, %Y"}}</span>
+                {% endif %}
+                {% if post.desc %}
+                    <span class="desc">{{ post.desc }}</span>
+                {% endif %}
+            </p>
+        </li>
+    {% endif %}{% endfor %}
+</ul>

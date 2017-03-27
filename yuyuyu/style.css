@@ -1,0 +1,148 @@
+*, *::before, *::after { box-sizing: border-box }
+body {
+    font-family: sans-serif;
+    margin: 0 auto;
+    max-width: 840px;
+    padding: 10px 70px;
+    background: #EEE;
+}
+nav {
+    font-size: 0;
+}
+nav input { display: none }
+nav label {
+    position: fixed;
+    top: 10px;
+    left: calc(50% - 410px);
+    width: 50px;
+    height: 50px;
+    background: #0094FF;
+    cursor: pointer;
+}
+nav label:hover { background: #0085E5; }
+nav label::before, nav label::after {
+    content: "";
+    width: 30px;
+    height: 4px;
+    position: absolute;
+    top: calc(13px + 4px + 6px);
+    left: 10px;
+    background: #FFF;
+    box-shadow: 0 calc(-4px - 6px) #FFF;
+    transform: rotate(0);
+    -webkit-transform: rotate(0);
+    transform-origin: center center;
+    -webkit-transform-origin: center center;
+    transition:
+        box-shadow 200ms 200ms, top 200ms 200ms, transform 200ms;
+}
+nav label::after {
+    box-shadow: none;
+    top: calc(13px + 4px + 6px + 4px + 6px);
+}
+nav input:checked ~ label::before {
+    box-shadow: 0 0 #FFF;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    transition:
+        box-shadow 200ms,
+        transform 200ms 200ms;
+}
+nav input:checked ~ label::after {
+    top: calc(13px + 4px + 6px);
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    transition:
+        top 200ms,
+        transform 200ms 200ms;
+}
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    height: 50px;
+    color: #FFF;
+    position: fixed;
+    top: 10px;
+    left: calc(50% - 360px);
+    line-height: 50px;
+    background: #0094FF;
+    transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    transform-origin: -25px 25px;
+    -webkit-transform-origin: -25px 25px;
+    overflow: hidden;
+    transition: transform 200ms, height 200ms;
+}
+nav input:checked ~ ul {
+    height: 150px;
+    transform: rotate(0);
+    -webkit-transform: rotate(0);
+}
+nav li {
+    display: block;
+    font-size: 24px;
+}
+nav li:first-of-type { padding: 0 10px }
+nav a {
+    display: block;
+    font: inherit;
+    text-decoration: none;
+    color: inherit;
+    padding: 0 10px;
+}
+nav a:hover { background-color: rgba(0,0,0,0.1) }
+nav .active a {
+    background-color: rgba(0,0,0,0.2);
+}
+.wrap {
+    padding: 10px;
+    background: #FFF;
+}
+code, pre {
+    font-family: "Menlo", "Consolas", monospace;
+}
+h1 {
+    border-bottom: 1px solid #C7C7C7;
+}
+code {
+    background: #EEE;
+    padding: 0 0.1em;
+    border-radius: 0.2em;
+}
+@media screen and (max-width: 860px) {
+    nav label { left: 10px; }
+    nav ul { left: 60px }
+    body {
+        padding-right: 10px;
+        max-width: 790px;
+        margin: 0;
+    }
+}
+@media screen and (max-width: 400px) {
+    body {
+        padding: 60px 10px 10px;
+        box-shadow: inset 0 33vh #0094FF;
+    }
+    nav ul {
+        transform: rotate(0);
+        -webkit-transform: rotate(0);
+        width: 100%;
+        top: 0;
+        left: 0px;
+        z-index: 1;
+        border-bottom: 1px solid rgba(0,0,0,0.1);
+    }
+    nav label {
+        top: 0;
+        left: 0;
+        z-index: 2;
+        border-bottom: 1px solid transparent;
+    }
+    nav input:not(:checked) ~ label {
+        border-bottom: 1px solid rgba(0,0,0,0.1);
+        transition: border-bottom 0ms 200ms;
+    }
+    nav li {font-size: 18px;}
+    nav a, nav li:first-child { padding-left: 60px;}
+}

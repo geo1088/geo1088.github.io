@@ -1,0 +1,17 @@
+title: Geo1088
+subtitle: doing shit i guess idk
+
+permalink: /posts/:title
+
+defaults:
+    -
+        scope:
+            path: ""
+        values:
+            layout: default
+
+# Build settings
+markdown: kramdown
+exclude:
+    - Gemfile
+    - Gemfile.lock
