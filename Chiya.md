@@ -1,6 +1,6 @@
 # A slightly personal explanation of why I love Chiya
 
-<img src="http://i.imgur.com/RCFRlY5.png" align="right" width="33%" alt="A close up of one of Chiya's eyes, with the reflection of one of those hand things in it">
+<img src="687474703a2f2f692e696d6775722e636f6d2f524346526c59352e706e67.png " align="right" width="33%" alt="A close up of one of Chiya's eyes, with the reflection of one of those hand things in it">
 
 I love Chiya. She's one of the cutest balls of sunshine I've ever laid eyes on, as almost anyone can tell, but there's more to it than that. I really like looking at how characters act when they're in bad situations; there's just something powerful about their actions that speaks to me in weird ways. Chiya is no exception. Experiences like these are what really makes me love characters - not only their personalities during every day events, but the way they handle themselves in the face of the shit life throws at them.
 
