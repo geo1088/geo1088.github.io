@@ -1,7 +1,7 @@
 ---
 title: A slightly personal explanation of why I love Chiya
 date: 2017-03-17
-desc: Some stuff.
+desc: After watching Urara's episode 11, I decided to comment about what I saw and why it spoke to me the way it did.
 ---
 
 # A slightly personal explanation of why I love Chiya
