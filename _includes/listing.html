@@ -10,6 +10,9 @@
                 {% if post.desc %}
                     <span class="desc">{{ post.desc }}</span>
                 {% endif %}
+                {% if post.tags %}
+                    <span class="tags">{{ post.tags }}</span>
+                {% endif %}
             </p>
         </li>
     {% endif %}{% endfor %}
