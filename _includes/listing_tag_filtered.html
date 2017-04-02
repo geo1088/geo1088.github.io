@@ -1,6 +1,7 @@
+<h1>Tagged
 <ul class="posts flex-cards">
     {% assign sorted = (site.pages | sort: "date") | reverse %}
-    {% for post in sorted %}{% if post.title and post.tags contains includes.tag%}
+    {% for post in sorted %}{% if post.title and post.tags contains include.tag %}
         <li class="post">
             <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
             <p class="details">
