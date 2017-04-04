@@ -259,12 +259,16 @@ footer p {
 .post .details {
     margin: 0;
 }
-.post .details span:not(:last-of-type):after {
+.post .details span:not(:last-of-type)::after {
     content: " \2013  ";
     opacity: 0.5;
 }
 .post + .post {
     margin: 20px 0 0;
+}
+
+.post .tag + .tag::before {
+    content: ",  ";
 }
 
 /* 600px - Disable side-by-side flex grid */
