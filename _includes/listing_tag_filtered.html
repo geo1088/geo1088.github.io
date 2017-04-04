@@ -1,4 +1,4 @@
-<h1>Tagged
+<h1>Tagged "{{ include.tag }}"</h1>
 <ul class="posts flex-cards">
     {% assign sorted = (site.pages | sort: "date") | reverse %}
     {% for post in sorted %}{% if post.title and post.tags contains include.tag %}
