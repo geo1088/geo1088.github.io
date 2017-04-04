@@ -11,10 +11,11 @@
                 {% if post.desc %}
                     <span class="desc">{{ post.desc }}</span>
                 {% endif %}
-                <span class="tags">{{ post.tags }}</span>
+                {% assign tag_links = "" | split: "" %}
                 {% for tag in post.tags %}
-                    <span class="one-tag">{{ tag }}</span>
+                    {% assign tag_links = tag_links | concat: '<a href="/tagged/{{ tag }}">{{ tag }}</a>' %}
                 {% endfor %}
+                <span class="tags">{{ tag_links | join: ", " }}</span>
             </p>
         </li>
     {% endif %}{% endfor %}
