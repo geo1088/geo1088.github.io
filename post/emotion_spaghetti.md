@@ -2,7 +2,9 @@
 title: In which I try to describe my current mental state
 date: 2017-04-01
 desc: A message for the people who have shaped my life over the past 16-ish months.
-tags: emotions, test
+tags:
+- emotions
+- test
 ---
 
 # In which I try to describe my current mental state
