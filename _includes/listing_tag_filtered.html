@@ -12,7 +12,7 @@
                     <span class="desc">{{ post.desc }}</span>
                 {% endif %}
                 <span class="tags">{{ post.tags }}</span>
-                {% for tag in posts.tags %}
+                {% for tag in post.tags %}
                     <span class="one-tag">{{ tag }}</span>
                 {% endfor %}
             </p>
