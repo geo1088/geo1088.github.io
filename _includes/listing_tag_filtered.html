@@ -12,6 +12,9 @@
                     <span class="desc">{{ post.desc }}</span>
                 {% endif %}
                 <span class="tags">{{ post.tags }}</span>
+                {% for tag in posts.tags %}
+                    <span class="one-tag">{{ tag }}</span>
+                {% endfor %}
             </p>
         </li>
     {% endif %}{% endfor %}
