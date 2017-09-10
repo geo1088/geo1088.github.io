@@ -101,6 +101,10 @@ main h1 {
     font-size: 3.2rem;
     margin: 40px 0;
 }
+main h1 small {
+    opacity: 0.5;
+    font-size: 0.7em;
+}
 main h2,
 main p,
 main blockquote,
