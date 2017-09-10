@@ -1,9 +1,7 @@
 ---
 ---
 
-# Hi.
-
-You look lost.
+# Hi. <small>You look lost.</small>
 
 ## Things I've done
 
