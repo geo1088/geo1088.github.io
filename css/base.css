@@ -102,6 +102,7 @@ main h1 {
     margin: 40px 0;
 }
 main h1 small {
+    display: block;
     opacity: 0.5;
     font-size: 0.7em;
 }
