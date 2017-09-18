@@ -1,5 +1,5 @@
 ---
-title:
+title: null
 ---
 
 # Hi. <small>You look lost.</small>
