@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>yes</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.30.0/codemirror.min.css" type="text/css" />
+        <style name='pnmmEditorStyle'>
+body { margin: 0 }
+.pnmmEditor {
+  box-sizing: border-box;
+  width: 100vw;
+  height: 100vh;
+  font-size: 12px;
+  padding-bottom: 21px;
+}
+.pnmmEditor .cm-header-1 { font-size: 2em; }
+.pnmmEditor .cm-header-2 { font-size: 1.5em; }
+.pnmmEditor .cm-header-3 { font-size: 1.33em; }
+.pnmmEditor .cm-header-5 { font-weight: 400; text-decoration: underline; }
+.pnmmEditor .cm-header-6 { font-weight: 400; font-style: italic; }
+
+.pnmm-statusbar {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background: #F7F7F7;
+  height: 21px;
+  left: 0;
+  z-index: 4;
+  box-sizing: border-box;
+  border-top: 1px solid #DDD;
+  display: flex;
+  justify-content: space-between;
+}
+.pnmm-statusbar-left, .pnmm-statusbar-right, .pnmm-statusbar-item {
+  line-height: 20px;
+  margin: 0 5px;
+}
+
+.pnmm-settingspane {
+  position: absolute;
+  bottom: 21px;
+  right: 5px;
+  border: 1px solid #DDD;
+  background: #F7F7F7;
+  z-index: 4;
+  border-bottom: 0;
+  padding: 4px 0;
+}
+.pnmm-setting {
+  margin: 0 5px;
+  display: flex;
+  justify-content: space-between;
+  white-space: pre;
+}
+.pnmm-setting-label:after {
+  content: ':\A0';
+}
+.pnmm-setting-input[type=checkbox] {
+  all: inherit;
+  margin: 0 !important;
+}
+.pnmm-setting-input[type=checkbox]::after {
+  content: 'Off';
+  color: red;
+}
+.pnmm-setting-input[type=checkbox]:checked::after {
+  content: '\A0 On';
+  color: limegreen;
+}
+.pnmm-setting.enabled .pnmm-setting-value {
+  color: green !important;
+}
+        </style>
+    </head>
+    <body>
+        <textarea id="editor"></textarea>
+        <script
+            src="https://code.jquery.com/jquery-3.2.1.min.js"
+            integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+            crossorigin="anonymous"></script>
+        <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/codemirror/5.29.0/codemirror.min.js"></script>
+        <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/codemirror/5.29.0/addon/mode/overlay.min.js"></script>
+        <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/codemirror/5.29.0/mode/markdown/markdown.min.js"></script>
+        <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/codemirror/5.29.0/mode/gfm/gfm.min.js"></script>
+        <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/codemirror/5.29.0/addon/edit/matchbrackets.min.js"></script>
+        <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/codemirror/5.29.0/addon/edit/closebrackets.min.js"></script>
+        <script>
+/* globals CodeMirror, $ */
+const editor = CodeMirror.fromTextArea($('#editor')[0], {
+  lineNumbers: false,
+  mode: 'gfm',
+  lineWrapping: true,
+  tabSize: 2,
+  indentWithTabs: false,
+  matchBrackets: true,
+  autoCloseBrackets: true
+});
+
+/* Status bar and settings page */
+const $statusBar = $(`
+  <div class='pnmm-statusbar' />
+`);
+const $statusBarLeft = $(`
+  <div class='pnmm-statusbar-left' />
+`).appendTo($statusBar);
+const $statusBarRight = $(`
+  <div class='pnmm-statusbar-right' />
+`).appendTo($statusBar);
+
+const $settingsPane = $(`
+  <div class='pnmm-settingspane' style='display:none'/>
+`);
+const $settingsButton = $(`
+  <a href='javascript:;' class='pnmm-statusbar-item pnmm-settings'>Settings</a>
+`).on('click', function () {
+  $settingsPane.toggle();
+}).appendTo($statusBarRight);
+
+/* Unordered list hanging indent */
+const unorderedListLineRegExp = /^\s*[-+*]\s+/;
+editor.on('renderLine', function(cm, line, elt) {
+  const result = unorderedListLineRegExp.exec(line.text);
+  if (!result) return;
+  var off = editor.defaultCharWidth() * result[0].length;
+  elt.style.textIndent = '-' + off + 'px';
+  elt.style.paddingLeft = 4 + off + 'px';
+});
+
+/* On tab, insert spaces */
+editor.setOption('extraKeys', {
+  Tab: function(cm) { cm.execCommand('insertSoftTab'); }
+});
+
+/* Status bar: Toggle line numbers */
+$settingsPane.append($(`
+  <div class='pnmm-setting pnmm-linenos' />
+`).append(`
+  <span class='pnmm-setting-label'>Line Numbers</span>
+`).append(
+  $(`
+    <input type=checkbox class='pnmm-setting-input'>
+  `).on('change', function () {
+    const $this = $(this);
+    const $setting = $this.closest('.pnmm-setting');
+    if ($this.is(':checked')) {
+      $setting.toggleClass('enabled', true);
+      editor.setOption('lineNumbers', true);
+    } else {
+      $setting.toggleClass('enabled', false);
+      editor.setOption('lineNumbers', false);
+    }
+  })
+));
+
+/* Status bar: Show current position */
+const $ruler = $(`<span class='pnmm-statusbar-item pnmm-ruler'>0:0</span>`);
+$statusBarRight.prepend($ruler);
+editor.on('cursorActivity', function () {
+  const {line, ch} = editor.getDoc().getCursor();
+  $ruler.text(`${line + 1}:${ch + 1}`);
+});
+
+/* Add our custom things to the editor */
+$(editor.getWrapperElement()).toggleClass('pnmmEditor').append($statusBar, $settingsPane);
+/* Hooray */
+window.pnmmEditor = editor;
+        </script>
+    </body>
+</html>
