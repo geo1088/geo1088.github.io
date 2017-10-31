@@ -9,6 +9,7 @@ title: null
 - [geo1088.me/desu](/desu), a port of the now-defunct single-serving site [desudesu.co.uk](https://web.archive.org/web/20161123134935/http://desudesu.co.uk:80/)
 - Virtually all the CSS for [/r/anime](https://www.reddit.com/r/anime) which I mod
 - Commits of varying degrees of usefulness for [toolbox for reddit](https://github.com/creesch/reddit-moderator-toolbox)
+- [Yuuko](/yuuko), a perpetually WIP Discord bot in Node using [Eris](https://abal.moe/Eris/)
 - [Some other stuff](https://github.com/Geo1088)
 
 ## Things I am
