@@ -291,3 +291,12 @@ footer p {
         display: block;
     }
 }
+
+table {
+    display: block;
+    background: #EEE;
+    padding: 5px;
+}
+th, td {
+    padding: 5px;
+}
