@@ -296,6 +296,7 @@ table {
     width: 100%;
     border: 1px solid #DDD;
     padding: 5px 0;
+    border-collapse: collapse;
 }
 tr {
     padding: 0 5px;
