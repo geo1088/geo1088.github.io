@@ -293,7 +293,7 @@ footer p {
 }
 
 table {
-    display: block;
+    width: 100%;
     border: 1px solid #DDD;
     padding: 5px 0;
 }
