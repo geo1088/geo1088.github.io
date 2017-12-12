@@ -3,8 +3,8 @@ title: Emote stats
 ---
 # Emote stats data
 
-Total messages seen: 82481
-Total seen emotes: 746
+Total messages seen: 82481  
+Total seen emotes: 746  
 Total messages with emotes: 7505
 
 ## Results by emote

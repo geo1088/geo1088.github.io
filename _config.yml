@@ -1,5 +1,4 @@
 title: Geo1088
-subtitle: doing shit i guess idk
 
 permalink: /posts/:title
 
@@ -15,3 +14,5 @@ markdown: kramdown
 exclude:
     - Gemfile
     - Gemfile.lock
+
+url: 'https://geo1088-github-io-geo1088.c9users.io'
