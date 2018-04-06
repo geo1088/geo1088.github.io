@@ -10,7 +10,7 @@ Hi there! I'm George, a high-school code monkey and casual weeb that does a bunc
 ## Projects
 
 - Maintainer of [toolbox for reddit](https://github.com/toolbox-team), a browser extension which gives reddit moderators more tools to make their lives easier
-- Created [Yuuko](https://github.com/Geo1088/yuuko), a Discord bot for developers, whose base is available as an npm package
+- Created [Yuuko](/yuuko/), a Discord bot for developers, whose base is available as an npm package
 - Wrote [reddit-stylesheet-sync](https://github.com/Geo1088/reddit-stylesheet-sync), a Travis config that lets subreddit style authors write Sass on GitHub and have it automatically compiled, minified, and uploaded to their sub
 - Wrote a [crappy IRC to Discord bridge](https://github.com/Geo1088/irc-discord) that allows me to use Snoonet without needing a dedicated IRC client
 - Designed [/r/anime's CSS theme](https://github.com/r-anime/stylesheet)
