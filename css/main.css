@@ -49,22 +49,39 @@ main {
     margin: 0 0 30px; }
   main h2 {
     flex: 0 0 auto;
-    box-shadow: inset 0 -1px #FFF, inset 0 -4px #0094FF;
     text-shadow: 3px 0 #FFF, -3px 0 #FFF, 2px 3px #FFF; }
     main h2:nth-of-type(4n+1) {
       box-shadow: inset 0 -1px #FFF, inset 0 -4px #00D650; }
       main h2:nth-of-type(4n+1) ~ * a {
-        color: #00D650; }
+        box-shadow: inset 0 -0.5px #FFF, inset 0 -2px #00D650;
+        color: inherit;
+        text-shadow: 2px 0 #FFF, 1px 0 #FFF, -1px 0 #FFF, -2px 0 #FFF, -1px -1px #FFF; }
+        main h2:nth-of-type(4n+1) ~ * a:hover {
+          color: #00D650; }
     main h2:nth-of-type(4n+2) {
       box-shadow: inset 0 -1px #FFF, inset 0 -4px #FF9B00; }
       main h2:nth-of-type(4n+2) ~ * a {
-        color: #FF9B00; }
+        box-shadow: inset 0 -0.5px #FFF, inset 0 -2px #FF9B00;
+        color: inherit;
+        text-shadow: 2px 0 #FFF, 1px 0 #FFF, -1px 0 #FFF, -2px 0 #FFF, -1px -1px #FFF; }
+        main h2:nth-of-type(4n+2) ~ * a:hover {
+          color: #FF9B00; }
     main h2:nth-of-type(4n+3) {
       box-shadow: inset 0 -1px #FFF, inset 0 -4px #FF0094; }
       main h2:nth-of-type(4n+3) ~ * a {
-        color: #FF0094; }
-    main h2 :selection {
-      text-shadow: none; }
+        box-shadow: inset 0 -0.5px #FFF, inset 0 -2px #FF0094;
+        color: inherit;
+        text-shadow: 2px 0 #FFF, 1px 0 #FFF, -1px 0 #FFF, -2px 0 #FFF, -1px -1px #FFF; }
+        main h2:nth-of-type(4n+3) ~ * a:hover {
+          color: #FF0094; }
+    main h2:nth-of-type(4n+4) {
+      box-shadow: inset 0 -1px #FFF, inset 0 -4px #0094FF; }
+      main h2:nth-of-type(4n+4) ~ * a {
+        box-shadow: inset 0 -0.5px #FFF, inset 0 -2px #0094FF;
+        color: inherit;
+        text-shadow: 2px 0 #FFF, 1px 0 #FFF, -1px 0 #FFF, -2px 0 #FFF, -1px -1px #FFF; }
+        main h2:nth-of-type(4n+4) ~ * a:hover {
+          color: #0094FF; }
   main > :last-child {
     margin-bottom: 0; }
 
