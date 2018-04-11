@@ -18,4 +18,4 @@ Hi there! I'm George, a high-school code monkey and casual weeb that does a bunc
 
 ## Contact
 
-If you want to talk to me, you can find me on [GitHub](https://github.com/Geo1088), [Reddit](https://www.reddit.com/user/geo1088), and sometimes [Twitter](https://twitter/com/geo1088_). The quickest way to reach me is generally through Reddit PM. If you really need it, my email is listed on my GitHub page.
+If you want to talk to me, you can find me on [GitHub](https://github.com/Geo1088), [Reddit](https://www.reddit.com/user/geo1088), and sometimes [Twitter](https://twitter.com/geo1088_). The quickest way to reach me is generally through Reddit PM. If you really need it, my email is listed on my GitHub page.
