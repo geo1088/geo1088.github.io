@@ -1,6 +1,6 @@
 ---
 title: animeawards
-a---
+---
 
 # hi you're lost
 
