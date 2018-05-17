@@ -14,5 +14,7 @@ markdown: kramdown
 exclude:
     - Gemfile
     - Gemfile.lock
+gems:
+    - jekyll-redirect-from
 
 url: 'https://geo1088-github-io-geo1088.c9users.io'
