@@ -1,4 +1,5 @@
 ---
+title: 'animeawards'
 layout: default
 redirect_to: "https://r-anime.github.io/animeawards/"
 ---
