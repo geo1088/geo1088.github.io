@@ -22,3 +22,7 @@ If you're a fan of my work and want to support me, you can check out my profile 
 ## Contact
 
 I'm active on [GitHub](https://github.com/Geo1088), [Reddit](https://www.reddit.com/user/geo1088), and [Twitter](https://twitter.com/geo1088_). My email is listed on my GitHub page if you want to get in touch with me that way instead.
+
+## Posts
+
+{% include listing.html %}
